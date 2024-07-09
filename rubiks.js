@@ -10,34 +10,33 @@ setDocDimensions(width, height);
 
 // store final lines here
 const finalLines = [];
-// const innerLines = [];
-// create a polyline
-const polyline = [
-  [30, 90],
-  [90, 90],
-  [90, 30],
-  [30, 30],
-  [30, 90]
-];
+let xStart = 30
+let yStart = 50;
+let xEnd = 70;
+let yEnd = 90;
+let interval = 20;
 
-function inner(s, i){
+
+const polyline = [
+  [xStart, yEnd],
+  [yEnd, yEnd],
+  [yEnd, xStart],
+  [xStart, xStart],
+  [xStart, yEnd]
+];
+// x = 30,50,70
+// y = 90,70,50
+function inner(x, i){
   let innerLines = [[
-  [s,90],
-  [s,70],
-  [s+i,70],
-  [s+i,90],
+  [x,90],
+  [x,70],
+  [x+i,70],
+  [x+i,90],
 ]];
   return innerLines;
 
 // s = 50, i = 20
-// function inner(){
-//   let innerLines = [[
-//   [50,90],
-//   [50,70],
-//   [70,70],
-//   [70,90],
-// ]];
-//   return innerLines
+
 
                 }
 finalLines.push(polyline);
