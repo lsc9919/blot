@@ -26,23 +26,18 @@ const polyline = [
 ];
 // x = 30,50,70
 // y = 90,70,50
-function inner(x, i){
+function inner(x, i,y){
   let innerLines = [[
-  [x,90],
-  [x,70],
-  [x+i,70],
-  [x+i,90],
+  [x,y],
+  [x,y-i],
+  [x+i,y-i],
+  [x+i,y],
 ]];
   return innerLines;
+}
 
-// s = 50, i = 20
-
-
-                }
 finalLines.push(polyline);
-// innerLines.push(inner);
-// transform lines using the toolkit
-// bt.rotate(finalLines, 30);
+
 
 
 drawLines(finalLines, {width: 20 });
