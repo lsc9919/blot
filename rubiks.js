@@ -15,14 +15,11 @@ let xStart = 30
 let yStart = 50;
 let xEnd = 70;
 let yEnd = 90;
-let interval = 20;
+let interval = bt.randIntInRange(1, 45);
 
 const polyline = [
   [xStart, yEnd],
   [yEnd, yEnd],
-  [yEnd, xStart],
-  [xStart, xStart],
-  [xStart, yEnd]
 ];
 
 // handles each baby square in the cube
@@ -39,7 +36,7 @@ function inner(x, i,y){
 finalLines.push(polyline);
 
 // outer layer of the cube
-drawLines(finalLines, {width: 20 });
+drawLines(finalLines, {width: 15 });
 
 // draws the inside cubies and randomizes the colors of each piece
 for(let i = xStart; i<=xEnd; i=i+interval){
